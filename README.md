@@ -55,12 +55,12 @@ heart-failure-risk-prediction/
 │  ├─ batch_size_experiment.ipynb
 │  ├─ layer_experiment.ipynb
 │  ├─ learning_rate_experiment.ipynb
-├─ images  # Designed images for the project/
+├─ images
 ├─ saved_values
 │  ├─ model.pth
 │  ├─ variables.pt
 ├─ .gitignore
-├─ dataset.zip  # Zip file of the dataset folder
+├─ dataset.zip  
 ├─ test.ipynb
 ├─ train.ipynb
 ```
@@ -69,4 +69,19 @@ heart-failure-risk-prediction/
 
 | File / Folder | Description |
 |---|---|
-| `dataset/` | Contains the heart failure dataset |
+| `dataset/` | Contains dataset files used for training and testing |
+| `dataset/train.csv` | Training dataset used for model learning |
+| `dataset/test.csv` | Unlabeled dataset |
+| `dataset/test_with_predictions.csv` | test.csv with labels |
+| `experiments/` | Jupyter notebooks for hyperparameter experiments |
+| `experiments/activation_function_experiment.ipynb` |  |
+| `experiments/batch_size_experiment.ipynb` |  |
+| `experiments/layer_experiment.ipynb` |  |
+| `experiments/learning_rate_experiment.ipynb` |  |
+| `images/` | Designed images for the project |
+| `saved_values/` | Saved model and frequently used variables shared across project files |
+| `saved_values/model.pth` | Trained model |
+| `saved_values/variables.pt` | Saved variables |
+| `train.ipynb` | Main notebook for training the MLP model |
+| `test.ipynb` | Notebook for predictions |
+| `dataset.zip` | Compressed version of the dataset folder |
