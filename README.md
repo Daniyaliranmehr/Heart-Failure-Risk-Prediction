@@ -85,3 +85,45 @@ heart-failure-risk-prediction/
 | `train.ipynb` | Main notebook for training the MLP model |
 | `test.ipynb` | Notebook for predictions |
 | `dataset.zip` | Compressed version of the dataset folder |
+
+## Training
+
+### Data Standardization
+
+Centering and scaling the data plays an important role in improving the training stability and convergence speed of neural networks. When features have different scales, optimization becomes inefficient and may lead to unstable gradients.
+
+As shown in the figure below, the distribution of the `platelets` feature has a large numerical range and is not centered around zero. The values are widely spread and have a high average (approximately 257,685).
+
+![Platelets Before Standardization](images/platelets_before.png)
+
+To address this issue, feature standardization is applied. Standardization transforms the data so that each feature has zero mean and unit variance, using the following formula:
+
+\[
+X_{norm} = \frac{X - \mu}{\sigma}
+\]
+
+where:
+- \( \mu \) is the mean of the training data
+- \( \sigma \) is the standard deviation of the training data
+
+In this project, standardization was implemented as follows:
+
+```python
+mu = torch.mean(x_train, dim=0)
+std = torch.std(x_train, dim=0)
+
+x_train = (x_train - mu) / std
+x_valid = (x_valid - mu) / std
+```
+
+After applying standardization, the distribution of the `platelets` feature becomes centered around zero, as shown below:
+
+![Platelets After Standardization](images/platelets_after.png)
+
+It can be observed that the transformed data has approximately zero mean and unit variance, which helps the model train more efficiently.
+
+### Important Note
+
+It is important to highlight that the mean and standard deviation are computed **only from the training set** and then applied to both training and validation sets.
+
+This is done to prevent data leakage, ensuring that information from the validation set does not influence the training process and leading to a more realistic evaluation of the model's performance.
