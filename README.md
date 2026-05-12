@@ -74,10 +74,10 @@ heart-failure-risk-prediction/
 | `dataset/test.csv` | Unlabeled dataset |
 | `dataset/test_with_predictions.csv` | test.csv with labels |
 | `experiments/` | Jupyter notebooks for hyperparameter experiments |
-| `experiments/activation_function_experiment.ipynb` |  |
-| `experiments/batch_size_experiment.ipynb` |  |
-| `experiments/layer_experiment.ipynb` |  |
-| `experiments/learning_rate_experiment.ipynb` |  |
+| `experiments/activation_function_experiment.ipynb` | Compare different activation functions and accuracy behavior |
+| `experiments/batch_size_experiment.ipynb` | Compare different batch sizes and loss behavior |
+| `experiments/layer_experiment.ipynb` | Compare different number of hidden layers and loss behavior |
+| `experiments/learning_rate_experiment.ipynb` | Compare different learning rates and loss behavior |
 | `images/` | Designed images for the project |
 | `saved_values/` | Saved model and frequently used variables shared across project files |
 | `saved_values/model.pth` | Trained model |
