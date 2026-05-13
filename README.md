@@ -187,7 +187,7 @@ In addition, several activation functions were evaluated in the `activation_func
 - ReLU
 
 <p align="center">
-  <img src="images/ReLU-Formula.jpg" width="30%">
+  <img src="images/ReLU-Formula.jpg" width="45%">
 </p>
 
 - LeakyReLU
