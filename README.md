@@ -88,6 +88,23 @@ heart-failure-risk-prediction/
 
 ## Training
 
+### Feature Correlation Analysis
+
+To better understand the relationships between features and the target variable (`DEATH_EVENT`), a correlation analysis was performed.
+
+The heatmap below shows the correlation matrix sorted by correlation with the target variable:
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+### Key Observations
+
+- `time` shows the strongest negative correlation with the target variable.
+- `serum_creatinine` and `age` have moderate positive correlation with mortality.
+- `ejection_fraction` and `serum_sodium` show negative correlation with death risk.
+- Some features such as `diabetes`, `sex`, and `smoking` have very weak correlation with the target.
+
+These observations help in understanding feature importance and the underlying structure of the dataset.
+
 ### Data Standardization
 
 Centering and scaling the data plays an important role in improving the training stability and convergence speed of neural networks. When features have different scales, optimization becomes inefficient and may lead to unstable gradients.
