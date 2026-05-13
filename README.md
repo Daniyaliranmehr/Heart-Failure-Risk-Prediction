@@ -189,3 +189,29 @@ Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary c
   <img src="images/bce_loss_y1.png" width="45%" />
   <img src="images/bce_loss_y0.png" width="45%" />
 </p>
+
+## Optimizer
+
+Stochastic Gradient Descent (SGD) was used as the optimization algorithm for training the neural network.
+
+The SGD parameter update rule is defined as:
+
+<div align="center">
+
+θₜ₊₁ = θₜ − η ∇θ J(θ)
+
+</div>
+
+where:
+- \( \theta \) represents the model parameters
+- \( \eta \) is the learning rate
+- \( \nabla_\theta J(\theta) \) denotes the gradient of the loss function
+
+In the `train.ipynb` notebook, the model was trained using a learning rate of `0.001`.
+
+In addition, different learning rates were experimentally evaluated in the `learning_rate_experiment.ipynb` notebook, including:
+- `0.1`
+- `0.01`
+- `0.001`
+
+These experiments were conducted to analyze the effect of the learning rate on the training loss and convergence behavior of the model.
