@@ -193,7 +193,7 @@ In addition, several activation functions were evaluated in the `activation_func
 - LeakyReLU
   
 <p align="center">
-  <img src="images/LeakyReLU-formula.jpg" width="30%">
+  <img src="images/LeakyReLU-formula.jpg" width="25%">
 </p>
 
 - GeLU
