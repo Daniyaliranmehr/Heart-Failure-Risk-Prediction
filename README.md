@@ -137,7 +137,7 @@ After applying standardization, the distribution of the `platelets` feature beco
 
 It can be observed that the transformed data has approximately zero mean and unit variance, which helps the model train more efficiently.
 
-### Important Note
+#### Important Note
 
 It is important to highlight that the mean and standard deviation are computed **only from the training set** and then applied to both training and validation sets.
 
