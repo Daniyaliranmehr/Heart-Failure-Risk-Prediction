@@ -179,6 +179,17 @@ h4 = 8
 
 All experiments and the main training process were conducted for 600 epochs.
 
+### Activation Functions
+
+In the `train.ipynb` notebook, the ReLU activation function was used between hidden layers of the MLP model.
+
+In addition, several activation functions were evaluated in the `activation_function_experiment.ipynb` notebook to study their impact on model performance. These included:
+- ReLU
+- LeakyReLU
+- GeLU
+
+It is important to note that in all experiments, the Sigmoid activation function was used in the output layer for binary classification.
+
 ### Batch Size
 
 In the `train.ipynb` notebook, a batch size of `4` was used for the training set, while a batch size of `8` was used for the validation set.
