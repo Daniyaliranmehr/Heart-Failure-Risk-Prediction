@@ -196,11 +196,9 @@ Stochastic Gradient Descent (SGD) was used as the optimization algorithm for tra
 
 The SGD parameter update rule is defined as:
 
-<div align="center">
-
-θₜ₊₁ = θₜ − η ∇θ J(θ)
-
-</div>
+<p align="center">
+  <img src="images/optim-formula.jpg" width="40%">
+</p>
 
 where:
 - θ represents the model parameters
