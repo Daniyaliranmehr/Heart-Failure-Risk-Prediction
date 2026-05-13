@@ -148,3 +148,25 @@ This is done to prevent data leakage, ensuring that information from the validat
 ### Model Architecture
 
 The model used in this project is a Multi-Layer Perceptron (MLP) neural network implemented using PyTorch.
+
+In the `train.ipynb` file, the main model architecture consists of:
+- An input layer with 12 features
+- A first hidden layer with 64 neurons
+- A second hidden layer with 32 neurons
+- An output layer with 1 neuron for binary classification
+
+In addition to the main architecture, several experiments with different network depths were conducted in the `layer_experiment.ipynb` notebook.
+
+The experiments included MLP models with:
+- 2 hidden layers
+- 3 hidden layers
+- 4 hidden layers
+
+The hidden layer sizes used in these experiments were:
+
+```python
+h1 = 64
+h2 = 32
+h3 = 16
+h4 = 8
+```
