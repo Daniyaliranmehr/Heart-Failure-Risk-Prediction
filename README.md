@@ -177,6 +177,17 @@ h3 = 16
 h4 = 8
 ```
 
+### Batch Size
+
+In the `train.ipynb` notebook, a batch size of `4` was used for the training set, while a batch size of `8` was used for the validation set.
+
+To further investigate the effect of batch size on the training process, additional experiments were conducted in the `batch_size_experiment.ipynb` notebook using the following batch sizes:
+- `4`
+- `8`
+- `16`
+
+These experiments were performed to compare the training loss obtained with different batch sizes during model training.
+
 ### Loss Function
 
 Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary classification.
