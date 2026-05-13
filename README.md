@@ -214,4 +214,4 @@ In addition, different learning rates were experimentally evaluated in the `lear
 - `0.01`
 - `0.001`
 
-These experiments were conducted to analyze the effect of the learning rate on the training loss and convergence behavior of the model.
+These experiments were conducted to analyze the effect of the learning rate on the training loss during the learning process.
