@@ -177,6 +177,8 @@ h3 = 16
 h4 = 8
 ```
 
+All experiments and the main training process were conducted for 600 epochs.
+
 ### Batch Size
 
 In the `train.ipynb` notebook, a batch size of `4` was used for the training set, while a batch size of `8` was used for the validation set.
