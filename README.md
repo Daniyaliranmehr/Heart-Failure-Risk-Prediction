@@ -199,7 +199,7 @@ In addition, several activation functions were evaluated in the `activation_func
 - GeLU
 
 <p align="center">
-  <img src="images/GeLU-formula.jpg" width="25%">
+  <img src="images/GeLU-formula.jpg" width="30%">
 </p>
 
 It is important to note that in all experiments, the Sigmoid activation function was used in the output layer for binary classification.
