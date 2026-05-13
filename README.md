@@ -114,7 +114,7 @@ Centering and scaling the data plays an important role in improving the training
 As shown in the figure below, the distribution of the `platelets` feature has a large numerical range and is not centered around zero. The values are widely spread and have a high average (approximately 257,685).
 
 <p align="center">
-  <img src="images/platelets_before.png" width="50%">
+  <img src="images/platelets_before.png" width="60%">
 </p>
 
 To address this issue, feature standardization is applied. Standardization transforms the data so that each feature has zero mean and unit variance, using the following formula:
@@ -138,7 +138,7 @@ x_valid = (x_valid - mu) / std
 After applying standardization, the distribution of the `platelets` feature becomes centered around zero, as shown below:
 
 <p align="center">
-  <img src="images/platelets_after.png" width="50%">
+  <img src="images/platelets_after.png" width="60%">
 </p>
 
 It can be observed that the transformed data has approximately zero mean and unit variance, which helps the model train more efficiently.
