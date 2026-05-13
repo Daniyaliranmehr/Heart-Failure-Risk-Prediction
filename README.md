@@ -203,9 +203,9 @@ The SGD parameter update rule is defined as:
 </div>
 
 where:
-- \( \theta \) represents the model parameters
-- \( \eta \) is the learning rate
-- \( \nabla_\theta J(\theta) \) denotes the gradient of the loss function
+- θ represents the model parameters
+- η is the learning rate
+- ∇θ J(θ) denotes the gradient of the loss function
 
 In the `train.ipynb` notebook, the model was trained using a learning rate of `0.001`.
 
