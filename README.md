@@ -95,7 +95,7 @@ To better understand the relationships between features and the target variable 
 The heatmap below shows the correlation matrix sorted by correlation with the target variable:
 
 <p align="center">
-  <img src="images/correlation_heatmap.png" width="70%">
+  <img src="images/correlation_heatmap.png" width="80%">
 </p>
 
 #### Key Observations
