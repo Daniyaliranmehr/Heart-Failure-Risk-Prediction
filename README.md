@@ -98,7 +98,7 @@ As shown in the figure below, the distribution of the `platelets` feature has a 
 
 To address this issue, feature standardization is applied. Standardization transforms the data so that each feature has zero mean and unit variance, using the following formula:
 
-X_norm = (X - μ) / σ
+X_standardized = (X - μ) / σ
 
 where:
 - μ is the mean of the training data
