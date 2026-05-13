@@ -186,7 +186,7 @@ In the `train.ipynb` notebook, the ReLU activation function was used between hid
 In addition, several activation functions were evaluated in the `activation_function_experiment.ipynb` notebook to study their impact on model performance. These included:
 - ReLU
 <p align="center">
-  <img src="images/ReLU-Formula.jpg" width="40%">
+  <img src="images/ReLU-Formula.jpg" width="30%">
 </p>
 - LeakyReLU
 - GeLU
