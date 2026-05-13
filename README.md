@@ -20,7 +20,6 @@ It includes multiple medical features that can help predict patient survival out
 
 ### Features
 
-<div align="center">
 | Feature | Description |
 |---|---|
 | age | Age of the patient |
@@ -35,16 +34,13 @@ It includes multiple medical features that can help predict patient survival out
 | sex | Gender of the patient |
 | smoking | Whether the patient smokes |
 | time | Follow-up period (days) |
-</div>
 
 ### Target Variable
 
-<div align="center">
 | Target | Meaning |
 |---|---|
 | 0 | Patient survived |
 | 1 | Patient died |
-</div>
 
 ## Project Structure
 
