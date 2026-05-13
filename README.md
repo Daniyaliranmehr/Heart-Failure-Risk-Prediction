@@ -94,7 +94,9 @@ To better understand the relationships between features and the target variable 
 
 The heatmap below shows the correlation matrix sorted by correlation with the target variable:
 
-![Correlation Heatmap](images/correlation_heatmap.png)
+<p align="center">
+  <img src="images/correlation_heatmap.png" width="80%">
+</p>
 
 #### Key Observations
 
@@ -111,7 +113,9 @@ Centering and scaling the data plays an important role in improving the training
 
 As shown in the figure below, the distribution of the `platelets` feature has a large numerical range and is not centered around zero. The values are widely spread and have a high average (approximately 257,685).
 
-![Platelets Before Standardization](images/platelets_before.png)
+<p align="center">
+  <img src="images/platelets_before.png" width="70%">
+</p>
 
 To address this issue, feature standardization is applied. Standardization transforms the data so that each feature has zero mean and unit variance, using the following formula:
 
@@ -133,7 +137,9 @@ x_valid = (x_valid - mu) / std
 
 After applying standardization, the distribution of the `platelets` feature becomes centered around zero, as shown below:
 
-![Platelets After Standardization](images/platelets_after.png)
+<p align="center">
+  <img src="images/platelets_after.png" width="70%">
+</p>
 
 It can be observed that the transformed data has approximately zero mean and unit variance, which helps the model train more efficiently.
 
@@ -176,7 +182,7 @@ h4 = 8
 Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary classification.
 
 <p align="center">
-  <img src="images/BCE-formula">
+  <img src="images/BCE-formula.jpg" width="50%">
 </p>
 
 <p align="center">
