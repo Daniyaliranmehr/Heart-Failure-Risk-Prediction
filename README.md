@@ -191,6 +191,11 @@ In addition, several activation functions were evaluated in the `activation_func
 </p>
 
 - LeakyReLU
+  
+<p align="center">
+  <img src="images/ReLU-formula.jpg" width="45%">
+</p>
+
 - GeLU
 
 It is important to note that in all experiments, the Sigmoid activation function was used in the output layer for binary classification.
