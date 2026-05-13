@@ -182,7 +182,7 @@ h4 = 8
 Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary classification.
 
 <p align="center">
-  <img src="images/BCE-formula.jpg" width="50%">
+  <img src="images/BCE-formula.jpg" width="40%">
 </p>
 
 <p align="center">
