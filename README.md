@@ -190,7 +190,7 @@ Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary c
   <img src="images/bce_loss_y0.png" width="45%" />
 </p>
 
-## Optimizer
+### Optimizer
 
 Stochastic Gradient Descent (SGD) was used as the optimization algorithm for training the neural network.
 
