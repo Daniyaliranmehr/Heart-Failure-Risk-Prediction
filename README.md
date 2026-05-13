@@ -96,7 +96,7 @@ The heatmap below shows the correlation matrix sorted by correlation with the ta
 
 ![Correlation Heatmap](images/correlation_heatmap.png)
 
-### Key Observations
+#### Key Observations
 
 - `time` shows the strongest negative correlation with the target variable.
 - `serum_creatinine` and `age` have moderate positive correlation with mortality.
