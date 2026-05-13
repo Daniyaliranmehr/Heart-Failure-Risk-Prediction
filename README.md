@@ -86,7 +86,7 @@ heart-failure-risk-prediction/
 | `test.ipynb` | Notebook for predictions |
 | `dataset.zip` | Compressed version of the dataset folder |
 
-## Training
+## Data Preprocessing
 
 ### Feature Correlation Analysis
 
@@ -142,3 +142,9 @@ It can be observed that the transformed data has approximately zero mean and uni
 It is important to highlight that the mean and standard deviation are computed **only from the training set** and then applied to both training and validation sets.
 
 This is done to prevent data leakage, ensuring that information from the validation set does not influence the training process and leading to a more realistic evaluation of the model's performance.
+
+## Training
+
+### Model Architecture
+
+The model used in this project is a Multi-Layer Perceptron (MLP) neural network implemented using PyTorch.
