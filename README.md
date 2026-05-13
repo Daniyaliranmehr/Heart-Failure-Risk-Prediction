@@ -170,3 +170,14 @@ h2 = 32
 h3 = 16
 h4 = 8
 ```
+
+### Loss Function
+
+Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary classification.
+
+BCE = -(1 / N) Σ [yᵢ log(pᵢ) + (1 - yᵢ) log(1 - pᵢ)]
+
+<p align="center">
+  <img src="images/bce_loss_y1.png" width="45%" />
+  <img src="images/bce_loss_y0.png" width="45%" />
+</p>
