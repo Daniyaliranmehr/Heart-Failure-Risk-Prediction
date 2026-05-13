@@ -86,7 +86,7 @@ heart-failure-risk-prediction/
 | `test.ipynb` | Notebook for predictions |
 | `dataset.zip` | Compressed version of the dataset folder |
 
-## Training
+## Data Preprocessing
 
 ### Feature Correlation Analysis
 
@@ -96,7 +96,7 @@ The heatmap below shows the correlation matrix sorted by correlation with the ta
 
 ![Correlation Heatmap](images/correlation_heatmap.png)
 
-### Key Observations
+#### Key Observations
 
 - `time` shows the strongest negative correlation with the target variable.
 - `serum_creatinine` and `age` have moderate positive correlation with mortality.
@@ -137,8 +137,47 @@ After applying standardization, the distribution of the `platelets` feature beco
 
 It can be observed that the transformed data has approximately zero mean and unit variance, which helps the model train more efficiently.
 
-### Important Note
+#### Important Note
 
 It is important to highlight that the mean and standard deviation are computed **only from the training set** and then applied to both training and validation sets.
 
 This is done to prevent data leakage, ensuring that information from the validation set does not influence the training process and leading to a more realistic evaluation of the model's performance.
+
+## Training
+
+### Model Architecture
+
+The model used in this project is a Multi-Layer Perceptron (MLP) neural network implemented using PyTorch.
+
+In the `train.ipynb` file, the main model architecture consists of:
+- An input layer with 12 features
+- A first hidden layer with 64 neurons
+- A second hidden layer with 32 neurons
+- An output layer with 1 neuron for binary classification
+
+In addition to the main architecture, several experiments with different network depths were conducted in the `layer_experiment.ipynb` notebook.
+
+The experiments included MLP models with:
+- 2 hidden layers
+- 3 hidden layers
+- 4 hidden layers
+
+The hidden layer sizes used in these experiments were:
+
+```python
+h1 = 64
+h2 = 32
+h3 = 16
+h4 = 8
+```
+
+### Loss Function
+
+Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary classification.
+
+BCE = -(1 / N) Σ [yᵢ log(pᵢ) + (1 - yᵢ) log(1 - pᵢ)]
+
+<p align="center">
+  <img src="images/bce_loss_y1.png" width="45%" />
+  <img src="images/bce_loss_y0.png" width="45%" />
+</p>
