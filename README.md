@@ -179,6 +179,8 @@ h4 = 8
 
 All experiments and the main training process were conducted for 600 epochs.
 
+---
+
 ### Activation Functions
 
 In the `train.ipynb` notebook, the ReLU activation function was used between hidden layers of the MLP model.
