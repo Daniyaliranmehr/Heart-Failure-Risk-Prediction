@@ -107,6 +107,8 @@ The heatmap below shows the correlation matrix sorted by correlation with the ta
 
 These observations help in understanding feature importance and the underlying structure of the dataset.
 
+---
+
 ### Data Standardization
 
 Centering and scaling the data plays an important role in improving the training stability and convergence speed of neural networks. When features have different scales, optimization becomes inefficient and may lead to unstable gradients.
