@@ -206,6 +206,8 @@ In addition, several activation functions were evaluated in the `activation_func
 
 It is important to note that in all experiments, the Sigmoid activation function was used in the output layer for binary classification.
 
+---
+
 ### Batch Size
 
 In the `train.ipynb` notebook, a batch size of `4` was used for the training set, while a batch size of `8` was used for the validation set.
@@ -216,6 +218,8 @@ To further investigate the effect of batch size on the training process, additio
 - `16`
 
 These experiments were performed to compare the training loss obtained with different batch sizes during model training.
+
+---
 
 ### Loss Function
 
@@ -229,6 +233,8 @@ Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary c
   <img src="images/bce_loss_y1.png" width="45%" />
   <img src="images/bce_loss_y0.png" width="45%" />
 </p>
+
+---
 
 ### Optimizer
 
