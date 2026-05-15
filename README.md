@@ -301,3 +301,22 @@ This can occur for several reasons:
 - Neural networks can capture nonlinear patterns that are not visible in simple correlation analysis.
 
 Therefore, correlation analysis should be interpreted as an exploratory statistical tool rather than a definitive measure of medical causality or feature importance.
+
+### Feature Importance Analysis using SHAP
+
+While correlation can highlight some general trends, it **cannot capture nonlinear relationships** or how features interact in a complex model like an MLP.
+
+To better understand how the model makes predictions, I used **SHAP (SHapley Additive exPlanations)**. SHAP assigns an importance value to each feature for every individual prediction, helping me see **how each feature pushes the model's output higher or lower**.
+
+
+<p align="center">
+  <img src="images/shap_summary_plot.png" width="40%">
+</p>
+
+In other words:
+- Each dot in the SHAP summary plot represents a single patient from the test data.
+- The position along the x-axis shows whether the feature increases (right) or decreases (left) the predicted risk of death.
+- The color of each dot represents the actual value of the feature (e.g., red for high values, blue for low values).
+- Features are sorted vertically by their overall impact on model predictions.
+
+> **Note:** This plot does **not** tell which feature is the most important overall. Instead, it shows **how each feature affects the model's decision for individual patients**.
