@@ -264,13 +264,15 @@ These experiments were conducted to analyze the effect of the learning rate on t
 
 ## Results and Analysis
 
-### Correlation Matrix Analysis
+### Data Analysis
+
+#### Correlation Matrix Analysis
 
 The correlation analysis provides insight into the linear relationship between each feature and the target variable (`DEATH_EVENT`).
 
 It is important to note that correlation values only measure **linear relationships** and do not necessarily indicate causation or overall feature importance in nonlinear models such as neural networks.
 
-### Correlation with DEATH_EVENT
+#### Correlation with DEATH_EVENT
 
 | Feature | Correlation | Interpretation |
 |---|---|---|
@@ -287,7 +289,7 @@ It is important to note that correlation values only measure **linear relationsh
 | `smoking` | `-0.026766` | Very weak negative correlation. This does not imply that smoking reduces mortality risk. The result is likely influenced by dataset limitations, sample size, feature interactions, or hidden confounding factors. |
 | `platelets` | `-0.063508` | Weak negative correlation. Platelet count alone does not show a strong linear relationship with mortality in this dataset. |
 
-### Important Observations
+#### Important Observations
 
 Some correlation values may appear inconsistent with established medical knowledge. For example, smoking is medically associated with cardiovascular disease, yet the dataset shows a weak negative correlation with mortality.
 
