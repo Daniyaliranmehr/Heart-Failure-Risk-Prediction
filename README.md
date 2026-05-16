@@ -88,7 +88,7 @@ heart-failure-risk-prediction/
 
 ## Data Preprocessing
 
-### Feature Correlation Analysis
+### Correlation Matrix Analysis
 
 To better understand the relationships between features and the target variable (`DEATH_EVENT`), a correlation analysis was performed.
 
@@ -106,6 +106,8 @@ The heatmap below shows the correlation matrix sorted by correlation with the ta
 - Some features such as `diabetes`, `sex`, and `smoking` have very weak correlation with the target.
 
 These observations help in understanding feature importance and the underlying structure of the dataset.
+
+---
 
 ### Data Standardization
 
@@ -179,6 +181,8 @@ h4 = 8
 
 All experiments and the main training process were conducted for 600 epochs.
 
+---
+
 ### Activation Functions
 
 In the `train.ipynb` notebook, the ReLU activation function was used between hidden layers of the MLP model.
@@ -187,7 +191,7 @@ In addition, several activation functions were evaluated in the `activation_func
 - ReLU
 
 <p align="center">
-  <img src="images/ReLU-Formula.jpg" width="30%">
+  <img src="images/ReLU-Formula.jpg" width="27%">
 </p>
 
 - LeakyReLU
@@ -198,7 +202,13 @@ In addition, several activation functions were evaluated in the `activation_func
 
 - GeLU
 
+<p align="center">
+  <img src="images/GeLU-formula.jpg" width="30%">
+</p>
+
 It is important to note that in all experiments, the Sigmoid activation function was used in the output layer for binary classification.
+
+---
 
 ### Batch Size
 
@@ -210,6 +220,8 @@ To further investigate the effect of batch size on the training process, additio
 - `16`
 
 These experiments were performed to compare the training loss obtained with different batch sizes during model training.
+
+---
 
 ### Loss Function
 
@@ -223,6 +235,8 @@ Binary Cross Entropy Loss (`BCELoss`) was used as the loss function for binary c
   <img src="images/bce_loss_y1.png" width="45%" />
   <img src="images/bce_loss_y0.png" width="45%" />
 </p>
+
+---
 
 ### Optimizer
 
@@ -247,3 +261,62 @@ In addition, different learning rates were experimentally evaluated in the `lear
 - `0.001`
 
 These experiments were conducted to analyze the effect of the learning rate on the training loss during the learning process.
+
+## Results and Analysis
+
+### Data Analysis
+
+#### Correlation Matrix Analysis
+
+The correlation analysis provides insight into the linear relationship between each feature and the target variable (`DEATH_EVENT`).
+
+It is important to note that correlation values only measure **linear relationships** and do not necessarily indicate causation or overall feature importance in nonlinear models such as neural networks.
+
+#### Correlation with DEATH_EVENT
+
+| Feature | Correlation | Interpretation |
+|---|---|---|
+| `time` | `-0.521597` | The strongest negative correlation in the dataset. Patients with longer follow-up periods are generally more likely to survive, resulting in lower mortality values. |
+| `serum_creatinine` | `0.326138` | Moderate positive correlation with mortality. Higher serum creatinine levels are associated with poorer kidney function and increased risk of death. |
+| `age` | `0.273166` | Moderate positive correlation. Older patients tend to have higher mortality risk due to weaker physiological condition and increased health complications. |
+| `ejection_fraction` | `-0.268376` | Moderate negative correlation. Higher ejection fraction usually indicates better heart pumping efficiency and lower risk of death. |
+| `serum_sodium` | `-0.256762` | Negative correlation with mortality. Lower serum sodium levels are often associated with worse heart failure conditions. |
+| `anaemia` | `0.088886` | Weak positive correlation. Anaemia may contribute to cardiovascular complications, but its direct linear relationship with mortality is relatively small in this dataset. |
+| `high_blood_pressure` | `0.044843` | Very weak positive correlation. Although hypertension is medically important, its isolated linear relationship with mortality is limited in this dataset. |
+| `creatinine_phosphokinase` | `0.031485` | Very weak positive correlation. The feature may contain high variance and outliers, reducing its linear correlation with the target. |
+| `diabetes` | `0.005338` | Almost no linear correlation observed. This does not imply that diabetes is unimportant, but rather that its relationship with mortality may be nonlinear or influenced by other variables. |
+| `sex` | `-0.021182` | Very weak negative correlation. The dataset does not show a significant direct linear relationship between gender and mortality. |
+| `smoking` | `-0.026766` | Very weak negative correlation. This does not imply that smoking reduces mortality risk. The result is likely influenced by dataset limitations, sample size, feature interactions, or hidden confounding factors. |
+| `platelets` | `-0.063508` | Weak negative correlation. Platelet count alone does not show a strong linear relationship with mortality in this dataset. |
+
+#### Important Observations
+
+Some correlation values may appear inconsistent with established medical knowledge. For example, smoking is medically associated with cardiovascular disease, yet the dataset shows a weak negative correlation with mortality.
+
+This can occur for several reasons:
+- The dataset size is relatively small.
+- Correlation measures only linear relationships.
+- Multiple clinical variables interact with each other.
+- Hidden confounding factors may influence the observed relationships.
+- Neural networks can capture nonlinear patterns that are not visible in simple correlation analysis.
+
+Therefore, correlation analysis should be interpreted as an exploratory statistical tool rather than a definitive measure of medical causality or feature importance.
+
+### Feature Importance Analysis using SHAP
+
+While correlation can highlight some general trends, it **cannot capture nonlinear relationships** or how features interact in a complex model like an MLP.
+
+To better understand how the model makes predictions, I used **SHAP (SHapley Additive exPlanations)**. SHAP assigns an importance value to each feature for every individual prediction, helping me see **how each feature pushes the model's output higher or lower**.
+
+
+<p align="center">
+  <img src="images/shap_summary_plot.png" width="40%">
+</p>
+
+In other words:
+- Each dot in the SHAP summary plot represents a single patient from the test data.
+- The position along the x-axis shows whether the feature increases (right) or decreases (left) the predicted risk of death.
+- The color of each dot represents the actual value of the feature (e.g., red for high values, blue for low values).
+- Features are sorted vertically by their overall impact on model predictions.
+
+> **Note:** This plot does **not** tell which feature is the most important overall. Instead, it shows **how each feature affects the model's decision for individual patients**.
