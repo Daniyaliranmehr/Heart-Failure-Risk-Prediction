@@ -324,3 +324,30 @@ In other words:
 - Features are sorted vertically by their overall impact on model predictions.
 
 > **Note:** This plot does **not** tell which feature is the most important overall. Instead, it shows **how each feature affects the model's decision for individual patients**.
+
+---
+
+### Training Phases and Hyperparameter Experiments
+
+#### 1. Base Model Training
+
+
+The base model training was performed in the `train.ipynb` notebook using the following hyperparameters:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 2
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Accuracy
+
+<p align="center">
+  <img src="images/loss_train.png" width="60%">
+</p>
+
+##### Loss
+
+<p align="center">
+  <img src="images/acc_train.png" width="60%">
+</p>
+
