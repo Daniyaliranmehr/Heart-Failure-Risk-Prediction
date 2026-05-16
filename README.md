@@ -310,7 +310,7 @@ To better understand how the model makes predictions, I used **SHAP (SHapley Add
 
 
 <p align="center">
-  <img src="images/shap_summary_plot.png" width="40%">
+  <img src="images/shap_summary_plot.png" width="60%">
 </p>
 
 In other words:
