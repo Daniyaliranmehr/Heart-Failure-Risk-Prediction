@@ -263,7 +263,7 @@ In addition, different learning rates were experimentally evaluated in the `lear
 These experiments were conducted to analyze the effect of the learning rate on the training loss during the learning process.
 
 <p align="center">
-  <img src="images/training_stages.jpg" width="80%">
+  <img src="images/training_stages.jpg" width="90%">
 </p>
 
 ## Results and Analysis
