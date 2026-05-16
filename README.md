@@ -339,13 +339,13 @@ The base model training was performed in the `train.ipynb` notebook using the fo
 - **Learning Rate:** 0.001
 - **Activation Function:** ReLU
 
-##### Accuracy
+##### Accuracy:
 
 <p align="center">
   <img src="images/loss_train.png" width="60%">
 </p>
 
-##### Loss
+##### Loss:
 
 <p align="center">
   <img src="images/acc_train.png" width="60%">
