@@ -339,15 +339,36 @@ The base model training was performed in the `train.ipynb` notebook using the fo
 - **Learning Rate:** 0.001
 - **Activation Function:** ReLU
 
-##### Accuracy:
+##### Accuracy curve:
 
 <p align="center">
   <img src="images/loss_train.png" width="60%">
 </p>
 
-##### Loss:
+##### Loss curve:
 
 <p align="center">
   <img src="images/acc_train.png" width="60%">
 </p>
 
+#### 2. Batch Size Experiment
+
+In the `batch_size_experiment.ipynb` notebook, the model was trained using batch sizes of **4**, **8**, and **16** to analyze their effect on the training process.
+
+The other hyperparameters were kept constant:
+
+- **Number of Hidden Layers:** 2
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_batch_size.png" width="60%">
+</p>
+
+#### 3. Learning Rate Experiment
+
+#### 4. Hidden Layer Experiment
+
+#### 5. Activation Function Experiment
