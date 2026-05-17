@@ -385,4 +385,19 @@ The remaining hyperparameters were kept constant during the experiments:
 
 #### 4. Hidden Layer Experiment
 
+
+In the `layer_experiment.ipynb` notebook, the model was trained using **2**, **3**, and **4** hidden layers to analyze the effect of network depth on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_layers.png" width="60%">
+</p>
+
 #### 5. Activation Function Experiment
