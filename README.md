@@ -369,6 +369,20 @@ The other hyperparameters were kept constant:
 
 #### 3. Learning Rate Experiment
 
+In the `learning_rate_experiment.ipynb` notebook, the model was trained using learning rates of **0.1**, **0.01**, and **0.001** to analyze their effect on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 2
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_learning_rate.png" width="60%">
+</p>
+
 #### 4. Hidden Layer Experiment
 
 #### 5. Activation Function Experiment
