@@ -401,3 +401,17 @@ The remaining hyperparameters were kept constant during the experiments:
 </p>
 
 #### 5. Activation Function Experiment
+
+In the `activation_function_experiment.ipynb` notebook, the model was trained using the **ReLU**, **LeakyReLU**, and **GeLU** activation functions to analyze their effect on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 3
+- **Learning Rate:** 0.001
+
+##### Accuracy curve:
+
+<p align="center">
+  <img src="images/acc_activation_functions.png" width="60%">
+</p>
