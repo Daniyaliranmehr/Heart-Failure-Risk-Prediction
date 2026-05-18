@@ -49,6 +49,7 @@ heart-failure-risk-prediction/
 ├─ dataset/
 │  ├─ test.csv
 │  ├─ test_with_predictions.csv
+│  │─ full_test.csv
 │  ├─ train.csv
 ├─ experiments/
 │  ├─ activation_function_experiment.ipynb
@@ -72,7 +73,8 @@ heart-failure-risk-prediction/
 | `dataset/` | Contains dataset files used for training and testing |
 | `dataset/train.csv` | Training dataset used for model learning |
 | `dataset/test.csv` | Unlabeled dataset |
-| `dataset/test_with_predictions.csv` | test.csv with labels |
+| `dataset/test_with_predictions.csv` | test.csv with predicted labels |
+| `dataset/full_test.csv` | test.csv with currect labels |
 | `experiments/` | Jupyter notebooks for hyperparameter experiments |
 | `experiments/activation_function_experiment.ipynb` | Compare different activation functions and accuracy behavior |
 | `experiments/batch_size_experiment.ipynb` | Compare different batch sizes and loss behavior |
