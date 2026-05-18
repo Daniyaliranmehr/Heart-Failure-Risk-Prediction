@@ -324,3 +324,94 @@ In other words:
 - Features are sorted vertically by their overall impact on model predictions.
 
 > **Note:** This plot does **not** tell which feature is the most important overall. Instead, it shows **how each feature affects the model's decision for individual patients**.
+
+---
+
+### Training Phases and Hyperparameter Experiments
+
+#### 1. Base Model Training
+
+
+The base model training was performed in the `train.ipynb` notebook using the following hyperparameters:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 2
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Accuracy curve:
+
+<p align="center">
+  <img src="images/acc_train.png" width="60%">
+</p>
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_train.png" width="60%">
+</p>
+
+#### 2. Batch Size Experiment
+
+In the `batch_size_experiment.ipynb` notebook, the model was trained using batch sizes of **4**, **8**, and **16** to analyze their effect on the training process.
+
+The other hyperparameters were kept constant:
+
+- **Number of Hidden Layers:** 2
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_batch_size.png" width="60%">
+</p>
+
+#### 3. Learning Rate Experiment
+
+In the `learning_rate_experiment.ipynb` notebook, the model was trained using learning rates of **0.1**, **0.01**, and **0.001** to analyze their effect on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 2
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_learning_rate.png" width="60%">
+</p>
+
+#### 4. Hidden Layer Experiment
+
+
+In the `layer_experiment.ipynb` notebook, the model was trained using **2**, **3**, and **4** hidden layers to analyze the effect of network depth on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Learning Rate:** 0.001
+- **Activation Function:** ReLU
+
+##### Loss curve:
+
+<p align="center">
+  <img src="images/loss_layers.png" width="60%">
+</p>
+
+#### 5. Activation Function Experiment
+
+In the `activation_function_experiment.ipynb` notebook, the model was trained using the **ReLU**, **LeakyReLU**, and **GeLU** activation functions to analyze their effect on the training process.
+
+The remaining hyperparameters were kept constant during the experiments:
+
+- **Batch Size:** 4
+- **Number of Hidden Layers:** 3
+- **Learning Rate:** 0.001
+
+##### Accuracy curve:
+
+<p align="center">
+  <img src="images/acc_activation_functions.png" width="60%">
+</p>
