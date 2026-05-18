@@ -353,6 +353,12 @@ The base model training was performed in the `train.ipynb` notebook using the fo
   <img src="images/loss_train.png" width="60%">
 </p>
 
+#### Test Performance
+
+The model was evaluated on the test set, achieving an accuracy of **69.3878%**.
+
+The predicted labels for `DEATH_EVENT` were compared against the ground truth labels provided in the `full_test.csv` file to compute the final test accuracy.
+
 #### 2. Batch Size Experiment
 
 In the `batch_size_experiment.ipynb` notebook, the model was trained using batch sizes of **4**, **8**, and **16** to analyze their effect on the training process.
