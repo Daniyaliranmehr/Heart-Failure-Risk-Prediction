@@ -359,6 +359,24 @@ The model was evaluated on the test set, achieving an accuracy of **69.3878%**.
 
 The predicted labels for `DEATH_EVENT` were compared against the ground truth labels provided in the `full_test.csv` file to compute the final test accuracy.
 
+> #### Base Model Analysis (Training, Validation, and Test Behavior)
+>
+> **Training Performance:**  
+> The model achieved very high performance on the training set, with accuracy approaching **100%** and loss decreasing close to **0** as training progressed.
+>
+> **Validation Performance:**  
+> A similar trend was observed on the validation set, where accuracy also approached **100%** and loss remained very low.
+>
+> The fact that both training and validation metrics improved simultaneously suggests that the model was able to fit the training distribution extremely well. However, this behavior does not necessarily guarantee strong generalization ability. In this case, it is likely influenced by the limited size of the dataset and the high similarity between training and validation splits, which may not fully represent unseen data diversity.
+>
+> **Interpretation:**  
+> Although this could indicate effective learning, it may also reflect that the model is capturing dataset-specific patterns rather than robust general features. Due to the small dataset size, the validation set might not be sufficiently challenging to reliably estimate generalization performance.
+>
+> **Test Performance:**  
+> In contrast, the model achieved only **69.3878% accuracy** on the test set, where predictions were compared against the ground truth labels in `full_test.csv`.
+>
+> This noticeable drop suggests that the model does not generalize well to truly unseen data. A likely reason is the limited dataset size, which can lead to overly optimistic validation results and reduced robustness on independent test samples. Other possible factors include dataset distribution differences and the model’s capacity being high relative to the available data.
+
 #### 2. Batch Size Experiment
 
 In the `batch_size_experiment.ipynb` notebook, the model was trained using batch sizes of **4**, **8**, and **16** to analyze their effect on the training process.
