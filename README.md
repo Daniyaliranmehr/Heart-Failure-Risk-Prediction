@@ -342,13 +342,13 @@ The base model training was performed in the `train.ipynb` notebook using the fo
 ##### Accuracy curve:
 
 <p align="center">
-  <img src="images/loss_train.png" width="60%">
+  <img src="images/acc_train.png" width="60%">
 </p>
 
 ##### Loss curve:
 
 <p align="center">
-  <img src="images/acc_train.png" width="60%">
+  <img src="images/loss_train.png" width="60%">
 </p>
 
 #### 2. Batch Size Experiment
