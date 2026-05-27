@@ -441,3 +441,9 @@ The remaining hyperparameters were kept constant during the experiments:
 <p align="center">
   <img src="images/acc_activation_functions.png" width="60%">
 </p>
+
+## Future Improvements
+
+The first and most important step for improving this project would be collecting a larger dataset in order to enhance the model’s generalization ability and overall performance.
+
+In case the project moves toward a production or commercial phase, additional techniques such as regularization methods (e.g., dropout) and other optimization strategies will be considered to further improve model robustness and accuracy.
