@@ -49,6 +49,7 @@ heart-failure-risk-prediction/
 ├─ dataset/
 │  ├─ test.csv
 │  ├─ test_with_predictions.csv
+│  │─ full_test.csv
 │  ├─ train.csv
 ├─ experiments/
 │  ├─ activation_function_experiment.ipynb
@@ -72,7 +73,8 @@ heart-failure-risk-prediction/
 | `dataset/` | Contains dataset files used for training and testing |
 | `dataset/train.csv` | Training dataset used for model learning |
 | `dataset/test.csv` | Unlabeled dataset |
-| `dataset/test_with_predictions.csv` | test.csv with labels |
+| `dataset/test_with_predictions.csv` | test.csv with predicted labels |
+| `dataset/full_test.csv` | test.csv with currect labels |
 | `experiments/` | Jupyter notebooks for hyperparameter experiments |
 | `experiments/activation_function_experiment.ipynb` | Compare different activation functions and accuracy behavior |
 | `experiments/batch_size_experiment.ipynb` | Compare different batch sizes and loss behavior |
@@ -327,7 +329,7 @@ In other words:
 
 ---
 
-### Training Phases and Hyperparameter Experiments
+### Training Phases and Experiments
 
 #### 1. Base Model Training
 
@@ -351,6 +353,30 @@ The base model training was performed in the `train.ipynb` notebook using the fo
   <img src="images/loss_train.png" width="60%">
 </p>
 
+#### Test Performance
+
+The model was evaluated on the test set, achieving an accuracy of **69.3878%**.
+
+The predicted labels for `DEATH_EVENT` were compared against the ground truth labels provided in the `full_test.csv` file to compute the final test accuracy.
+
+> #### Base Model Analysis (Training, Validation, and Test Behavior)
+>
+> **Training Performance:**  
+> The model achieved very high performance on the training set, with accuracy approaching **100%** and loss decreasing close to **0** as training progressed.
+>
+> **Validation Performance:**  
+> A similar trend was observed on the validation set, where accuracy also approached **100%** and loss remained very low.
+>
+> The fact that both training and validation metrics improved simultaneously suggests that the model was able to fit the training distribution extremely well. However, this behavior does not necessarily guarantee strong generalization ability. In this case, it is likely influenced by the limited size of the dataset and the high similarity between training and validation splits, which may not fully represent unseen data diversity.
+>
+> **Interpretation:**  
+> Although this could indicate effective learning, it may also reflect that the model is capturing dataset-specific patterns rather than robust general features. Due to the small dataset size, the validation set might not be sufficiently challenging to reliably estimate generalization performance.
+>
+> **Test Performance:**  
+> In contrast, the model achieved only **69.3878% accuracy** on the test set, where predictions were compared against the ground truth labels in `full_test.csv`.
+>
+> This noticeable drop suggests that the model does not generalize well to truly unseen data. A likely reason is the limited dataset size, which can lead to overly optimistic validation results and reduced robustness on independent test samples. Other possible factors include dataset distribution differences and the model’s capacity being high relative to the available data.
+
 #### 2. Batch Size Experiment
 
 In the `batch_size_experiment.ipynb` notebook, the model was trained using batch sizes of **4**, **8**, and **16** to analyze their effect on the training process.
@@ -367,6 +393,8 @@ The other hyperparameters were kept constant:
   <img src="images/loss_batch_size.png" width="60%">
 </p>
 
+> Best Model Performance: Batch Size 4 > Batch Size 8 > Batch Size 16
+
 #### 3. Learning Rate Experiment
 
 In the `learning_rate_experiment.ipynb` notebook, the model was trained using learning rates of **0.1**, **0.01**, and **0.001** to analyze their effect on the training process.
@@ -382,6 +410,8 @@ The remaining hyperparameters were kept constant during the experiments:
 <p align="center">
   <img src="images/loss_learning_rate.png" width="60%">
 </p>
+
+> Best Model Performance: Learning Rate 0.1 > Learning Rate 0.01 > Learning Rate 0.001
 
 #### 4. Hidden Layer Experiment
 
@@ -400,6 +430,8 @@ The remaining hyperparameters were kept constant during the experiments:
   <img src="images/loss_layers.png" width="60%">
 </p>
 
+> Best Model Performance: 3 Layers > 2 Layers > 4 Layers
+
 #### 5. Activation Function Experiment
 
 In the `activation_function_experiment.ipynb` notebook, the model was trained using the **ReLU**, **LeakyReLU**, and **GeLU** activation functions to analyze their effect on the training process.
@@ -415,3 +447,11 @@ The remaining hyperparameters were kept constant during the experiments:
 <p align="center">
   <img src="images/acc_activation_functions.png" width="60%">
 </p>
+
+> Best Model Performance: ReLU > LeakyReLU > GeLU
+
+## Future Improvements
+
+The first and most important step for improving this project would be collecting a larger dataset in order to enhance the model’s generalization ability and overall performance.
+
+In case the project moves toward a production or commercial phase, additional techniques such as regularization methods (e.g., dropout) and other optimization strategies will be considered to further improve model robustness and accuracy.
