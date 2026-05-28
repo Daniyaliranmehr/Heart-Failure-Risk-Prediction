@@ -1,4 +1,4 @@
-# Heart Failure Prediction using MLP Neural Network
+<img width="1188" height="105" alt="image" src="https://github.com/user-attachments/assets/50a42aba-421a-481a-a192-034a5a3fe26f" /><img width="1846" height="105" alt="image" src="https://github.com/user-attachments/assets/df0c6328-5132-48a5-bb47-4a14a7ec3d6a" /><img width="1476" height="105" alt="image" src="https://github.com/user-attachments/assets/c2bb95a7-2ef8-4bd4-9599-c3b7940fe02d" /># Heart Failure Prediction using MLP Neural Network
 
 ## Overview
 
@@ -329,7 +329,7 @@ In other words:
 
 ---
 
-### Training Phases and Hyperparameter Experiments
+### Training Phases and Experiments
 
 #### 1. Base Model Training
 
@@ -393,6 +393,8 @@ The other hyperparameters were kept constant:
   <img src="images/loss_batch_size.png" width="60%">
 </p>
 
+> Best Model Performance: Batch Size 4 > Batch Size 8 > Batch Size 16
+
 #### 3. Learning Rate Experiment
 
 In the `learning_rate_experiment.ipynb` notebook, the model was trained using learning rates of **0.1**, **0.01**, and **0.001** to analyze their effect on the training process.
@@ -408,6 +410,8 @@ The remaining hyperparameters were kept constant during the experiments:
 <p align="center">
   <img src="images/loss_learning_rate.png" width="60%">
 </p>
+
+> Best Model Performance: Learning Rate 0.1 > Learning Rate 0.01 > Learning Rate 0.001
 
 #### 4. Hidden Layer Experiment
 
@@ -426,6 +430,8 @@ The remaining hyperparameters were kept constant during the experiments:
   <img src="images/loss_layers.png" width="60%">
 </p>
 
+> Best Model Performance: 3 Layers > 2 Layers > 4 Layers
+
 #### 5. Activation Function Experiment
 
 In the `activation_function_experiment.ipynb` notebook, the model was trained using the **ReLU**, **LeakyReLU**, and **GeLU** activation functions to analyze their effect on the training process.
@@ -441,6 +447,8 @@ The remaining hyperparameters were kept constant during the experiments:
 <p align="center">
   <img src="images/acc_activation_functions.png" width="60%">
 </p>
+
+> Best Model Performance: ReLU > LeakyReLU > GeLU
 
 ## Future Improvements
 
