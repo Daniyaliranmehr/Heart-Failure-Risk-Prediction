@@ -1,4 +1,4 @@
-<img width="1188" height="105" alt="image" src="https://github.com/user-attachments/assets/50a42aba-421a-481a-a192-034a5a3fe26f" /><img width="1846" height="105" alt="image" src="https://github.com/user-attachments/assets/df0c6328-5132-48a5-bb47-4a14a7ec3d6a" /><img width="1476" height="105" alt="image" src="https://github.com/user-attachments/assets/c2bb95a7-2ef8-4bd4-9599-c3b7940fe02d" /># Heart Failure Prediction using MLP Neural Network
+# Heart Failure Prediction using MLP Neural Network
 
 ## Overview
 
