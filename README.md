@@ -6,6 +6,24 @@ This project uses a Multi-Layer Perceptron (MLP) neural network to predict heart
 
 The objective is to apply deep learning techniques to healthcare data and evaluate the effectiveness of MLP models for medical risk prediction.
 
+## Applications
+
+The objective of this MLP model is to translate static clinical data into actionable insights. It is designed to act as a supportive layer in healthcare systems, assisting professionals in risk assessment and resource management.
+
+Key Objectives:
+
+- **Dynamic Prognostic Simulator**
+
+This application serves as an interactive time-horizon simulator for healthcare professionals. 
+
+Upon entering a patient's static clinical biomarkers (such as serum creatinine, ejection fraction, and sodium levels), the physician can dynamically adjust the time feature to simulate different follow-up periods (e.g., 30, 90, or 180 days). The neural network processes these inputs to recalculate and project the survival probability for each specific interval. This dynamic trajectory modeling enables cardiologists to visualize how quickly a patient might approach a critical risk threshold, allowing for highly proactive and personalized intervention strategies.
+
+- **Data-Driven Follow-Up Scheduling**
+
+A major challenge in healthcare management is determining the optimal time to recall a discharged patient for reassessment.
+
+Hospitals typically rely on fixed, generic schedules (e.g., "return in three months"). This model can serve as the intelligent core of a hospital's scheduling system. By processing the clinical data of a patient, the system predicts the exact timeframe post-discharge when the risk of mortality or heart failure recurrence reaches a critical threshold. Consequently, the hospital can schedule the next follow-up appointment precisely before this high-risk window occurs. This proactive approach not only plays a crucial role in saving lives but also prevents the waste of hospital resources on unnecessary routine check-ups.
+
 ## Dataset
 
 The dataset used in this project contains clinical records of heart failure patients.  
